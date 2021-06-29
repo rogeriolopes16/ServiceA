@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>Service A</title>
+  <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+<div id="area" >
+  <fieldset>
+      <legend>Entrada da Mensagem</legend>
+      <form action="{{ url_for('entrada') }}" name="entrada" id="entrada" autocomplete="off">
+        <label>ID da Mensagem:</label><input name="id" id="id" class="campo_nome" type="text"><br>
+        <label>Mensagem:</label><br><textarea name="menssagem" id="menssage" class="msg" cols="35" rows="8"></textarea><br>
+        <input class="btn_submit" type="submit" value="Enviar">
+    </form>
+    {% block response %}
+      <label>Resposta envio:</label><input name="response" id="response" class="campo_nome" type="text" value="{{ response }}" disabled><br>
+    {% endblock %}
+
+  </fieldset>
+
+</div>
+
+<div id="arearecuperar">
+  <fieldset>
+    <form action="{{ url_for('recuperar') }}" name="recuperar" id="recuperar" autocomplete="off">
+      <legend>Recuperar Mensagem</legend>
+      <label>ID da Mensagem:</label><input name="idresp" id="idresp" class="campo_nome" type="text"><br>
+      <input class="btn_submit" type="submit" value="Recuperar">
+    </form>
+    {% block responseS3 %}
+    <label>Mensagem:</label><br><textarea name="menssageresp" id="menssageresp" class="msg" cols="35" rows="8" disabled>{{ responseS3 }}</textarea><br>
+    {% endblock %}
+  </fieldset>
+
+</div>
+
+</body>
+</html>

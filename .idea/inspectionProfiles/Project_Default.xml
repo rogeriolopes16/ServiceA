@@ -1,0 +1,19 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="lewis.py" />
+          <option value="urllib3" />
+          <option value="validUrl.fake_useragent" />
+          <option value="cx_Oracle" />
+          <option value="jogoteca.flask_mysqldb" />
+          <option value="jobs.self" />
+          <option value="jobs.cad_via_chamados" />
+          <option value="jobs.flask_apscheduler" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
